@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Georgia', serif;
+  color: #111;
+}
+
+#cover {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.vogue-title {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: 'Didot', serif;
+  color: black;
+  text-align: center;
+}
+
+.headline h2 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  color: #555;
+}
+
+.cover-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cover-image img {
+  width: 80vw;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.cover-image img:hover {
+  transform: scale(1.03);
+}
+
+.subtext {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+#start {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#start button {
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-family: 'Arial Narrow', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+#start button:hover {
+  background-color: #ff6ca7;
+  color: black;
+  transform: scale(1.05);
+}
+
+.details {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #333;
+  font-style: italic;
+}
+
+.details .highlight {
+  font-weight: bold;
+  color: #d63384;
+  margin-top: 5px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}

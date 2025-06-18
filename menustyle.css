@@ -1,0 +1,112 @@
+/* Reset + Responsive Background */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('rakshitaFinal (2).png') center center no-repeat;
+  background-size: cover;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Overlay */
+.hero {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 90%;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Headings */
+.overlaycontent h1 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: 'Didot', serif;
+}
+
+.overlaycontent h2 {
+  font-style: italic;
+  font-size: 1.2rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  color: #c0e7fa;
+}
+
+/* Menu Buttons */
+.exploremenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.exploremenu button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: capitalize;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.exploremenu button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Fix for Background */
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+    background-size: contain;
+    background-position: top;
+  }
+
+  .overlaycontent h1 {
+    font-size: 2rem;
+  }
+
+  .overlaycontent h2 {
+    font-size: 1rem;
+  }
+
+  .exploremenu {
+    gap: 10px;
+  }
+
+  .exploremenu button {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}

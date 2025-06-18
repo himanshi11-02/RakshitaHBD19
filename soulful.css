@@ -1,0 +1,187 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography + Base */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 3rem;
+}
+
+/* Header */
+#heading {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 3px;
+  color: #2c2c2c;
+}
+
+/* Main Title */
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.8rem;
+  color: #4b4b4b;
+}
+h1, h2 {
+      text-align: center;
+      color: #e91e63;
+    }
+/* Subheadings */
+h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+  margin: 1rem 0;
+  color: #e91e63;
+}
+
+/* Sticky Nav */
+.Nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffffd9;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.Nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.7rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.Nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Nav a:hover {
+  color: #7e3ff2;
+}
+
+/* Section Titles Left Aligned */
+.parentsong h3,
+.parentmovie h3 {
+  text-align: left;
+  margin: 1rem 1.5rem 0.5rem;
+  font-size: 1.1rem;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+/* Songs Container */
+.songs1, .songs2,
+.movie1, .movie2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+/* Responsive iframes with hover scale */
+iframe {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+iframe:hover {
+  transform: scale(1.03);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parentsong {
+  padding: 2rem 1rem;
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Sticky Notes Section */
+.parentnote {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #e6e6fa;
+  padding: 1.5rem 1rem;
+  gap: 1rem;
+  border-top: 1px dashed #999;
+  border-bottom: 1px dashed #999;
+}
+
+.note {
+  background-color: #fffbe7;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 280px;
+  font-family: 'Patrick Hand', cursive;
+  font-style: italic;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.note:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Surprise Section */
+.surprise {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+}
+ .home {
+      margin: 20px auto;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .home a {
+      background-color: #ff6ca7;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .home a:hover {
+      background-color: #f94c94;
+    }

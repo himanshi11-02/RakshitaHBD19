@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: white;
+      color: #333;
+    }
+
+    /* Header */
+    #heading {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 3px;
+  color: #2c2c2c;
+}
+
+/* Main Title */
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.8rem;
+  color: #4b4b4b;
+}
+h1, h2 {
+      text-align: center;
+      color: #e91e63;
+    }
+
+    /* Navigation */
+    .Nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .Nav a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .Nav a:hover,
+    .Nav li:hover {
+      color: #ff4081;
+      cursor: pointer;
+    }
+
+    /* Hide radio buttons */
+    input[type="radio"] {
+      display: none;
+    }
+
+    /* Show selected photo page */
+    #page0:checked ~ #pb0,
+    #page1:checked ~ #pb1,
+    #page2:checked ~ #pb2,
+    #page3:checked ~ #pb3,
+    #page4:checked ~ #pb4,
+    #page5:checked ~ #pb5,
+    #page6:checked ~ #pb6 {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    /* Photo Book Pages */
+    .pb {
+      display: none;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 18px;
+      width: 90vw;
+      max-width: 700px;
+      background: linear-gradient(to bottom right, #fff6fb, #ffe3f0);
+      border: 2px dashed #ff99b3;
+      box-shadow: 0 8px 16px rgba(255, 160, 180, 0.25);
+      text-align: center;
+    }
+
+    .pb h2::before {
+      content: "🎀 ";
+    }
+
+    .pb h2::after {
+      content: " 🎀";
+    }
+
+    .pb h2 {
+      background: #ffe3ef;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(255, 153, 180, 0.3);
+    }
+
+    /* Photo Layout */
+    .photobook {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .photobook img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .photobook img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px rgba(255, 153, 180, 0.4);
+    }
+
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #444;
+      margin-top: 15px;
+      background-color: #fff0f7;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid #ffc8d9;
+    }
+
+    /* Fade-in */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .label-button {
+      display: inline-block;
+      margin-top: 15px;
+      cursor: pointer;
+      padding: 10px 20px;
+      background-color: #ff6ca7;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .label-button:hover {
+      background-color: #f94c94;
+    }
+
+    .home {
+      margin: 20px auto;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .home a {
+      background-color: #ff6ca7;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .home a:hover {
+      background-color: #f94c94;
+    }
+
+    .intro-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="heading">
+    <h1>VOGUE</h1>
+  </div>
+
+  <h2>Gallery</h2>
+
+  <div class="Nav">
+    <ul>
+      <a href="gallery.html"><li style="color: rgb(18, 18, 189);">Gallery</li></a>
+      <a href="letter.html"><li>Letter</li></a>
+      <a href="aura.html"><li>Aura</li></a>
+      <a href="soulful.html"><li>Soulful</li></a>
+    </ul>
+  </div>
+
+  <!-- Radio buttons -->
+  <input type="radio" name="album" id="page0" checked />
+  <input type="radio" name="album" id="page1" />
+  <input type="radio" name="album" id="page2" />
+  <input type="radio" name="album" id="page3" />
+  <input type="radio" name="album" id="page4" />
+  <input type="radio" name="album" id="page5" />
+  <input type="radio" name="album" id="page6" />
+
+  <!-- Page 0 -->
+  <div class="pb" id="pb0">
+    <h2>Photo Album</h2>
+    <div class="intro-box">
+      <pre>Let's Dive Into Your memories</pre>
+      <label for="page1" class="label-button">Next</label>
+    </div>
+  </div>
+
+  <!-- Page 1 -->
+  <div class="pb" id="pb1">
+    <h2>Tiny Terror Tales</h2>
+    <div class="photobook">
+      <img src="tt1.jpeg" alt="img" />
+      <img src="tt2.jpeg" alt="img" />
+      <img src="tt3.jpeg" alt="img" />
+      <img src="tt4.jpeg" alt="img" />
+    </div>
+    <label for="page2" class="label-button">Next</label>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="pb" id="pb2">
+    <h2>Pawri Hori Hain</h2>
+    <div class="photobook">
+      <img src="pp1.jpeg" alt="img" />
+      <img src="pp2.jpeg" alt="img" />
+      <img src="pp3.jpeg" alt="img" />
+      <img src="pp4.jpeg" alt="img" />
+      <img src="pp5.jpeg" alt="img" />
+      <img src="pp6.jpeg" alt="img" />
+    </div>
+    <label for="page1" class="label-button">Prev</label>
+    <label for="page3" class="label-button">Next</label>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="pb" id="pb3">
+    <h2>The Meme Album</h2>
+    <div class="photobook">
+      <img src="mm1.jpeg" alt="img" />
+      <img src="mm2.jpeg" alt="img" />
+      <img src="mm3.jpeg" alt="img" />
+      <img src="mm4.jpeg" alt="img" />
+    </div>
+    <label for="page2" class="label-button">Prev</label>
+    <label for="page4" class="label-button">Next</label>
+  </div>
+
+  <!-- Page 4 -->
+  <div class="pb" id="pb4">
+    <h2>Birthday Bombs</h2>
+    <div class="photobook">
+      <img src="bb1.jpeg" alt="img" />
+      <img src="bb2.jpeg" alt="img" />
+      <img src="bb3.jpeg" alt="img" />
+    </div>
+    <label for="page3" class="label-button">Prev</label>
+    <label for="page5" class="label-button">Next</label>
+  </div>
+
+  <!-- Page 5 -->
+  <div class="pb" id="pb5">
+    <h2>Forever Us</h2>
+    <div class="photobook">
+      <img src="ff1.jpeg" alt="img" />
+      <img src="ff2.jpeg" alt="img" />
+      <img src="ff3.jpeg" alt="img" />
+      <img src="ff5.jpeg" alt="img" />
+      <img src="ff6.jpeg" alt="img" />
+      <img src="ff7.jpeg" alt="img" />
+      <img src="ff8.jpeg" alt="img" />
+    </div>
+    <label for="page4" class="label-button">Prev</label>
+    <label for="page6" class="label-button">Next</label>
+  </div>
+
+  <!-- Page 6 -->
+  <div class="pb" id="pb6">
+    <h2>The End</h2>
+    <div class="photobook">
+      <pre>
+Always remember — the people in these photos will always have your back.
+We’re just a call away, cheering for you, always proud of the amazing person you are becoming. 💖📞✨
+      </pre>
+    </div>
+    <label for="page0" class="label-button">Start</label>
+  </div>
+
+  <!-- Home Button -->
+  <div class="home">
+    <a href="index.html">Home</a>
+  </div>
+</body>
+</html>

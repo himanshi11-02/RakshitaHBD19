@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography + Base */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 3rem;
+}
+
+/* Header */
+#heading {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 3px;
+  color: #2c2c2c;
+}
+
+/* Main Title */
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.8rem;
+  color: #4b4b4b;
+}
+h1, h2 {
+      text-align: center;
+      color: #e91e63;
+    }
+/* Subheadings */
+h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+  margin: 1rem 0;
+  color: #e91e63;
+}
+
+/* Sticky Nav */
+.Nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffffd9;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.Nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.7rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.Nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Nav a:hover {
+  color: #7e3ff2;
+}

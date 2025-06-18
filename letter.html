@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letter</title>
+</head>
+<style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography + Base */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 3rem;
+}
+
+/* Header */
+#heading {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 3px;
+  color: #2c2c2c;
+}
+
+/* Main Title */
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.8rem;
+  color: #4b4b4b;
+}
+h1, h2 {
+      text-align: center;
+      color: #e91e63;
+    }
+/* Subheadings */
+h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+  margin: 1rem 0;
+  color: #e91e63;
+}
+
+/* Sticky Nav */
+.Nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffffd9;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.Nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.7rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.Nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Nav a:hover {
+  color: #7e3ff2;
+}
+input[type="radio"]{
+    display: none;
+}
+ #cover:checked ~ #c1,
+ #main:checked ~ #m1{
+    display: block;
+ }
+.letter1{
+    display: none;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 3px rgb(165, 163, 163);
+}
+
+pre {
+      white-space: pre-wrap;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #4a4a4a;
+    }
+    label.read{
+        font-size: x-large;
+        font-weight: bolder;
+        margin-top: 10px;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 133, 153);
+    }
+    #m1{
+        background-color: rgb(255, 221, 158);
+        font-size: medium;
+        font-weight: bold;
+    }
+     .home {
+      margin: 20px auto;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .home a {
+      background-color: #ff6ca7;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .home a:hover {
+      background-color: #f94c94;
+    }
+</style>
+<body>
+     <div id="heading">
+        <h1>VOGUE</h1>
+    </div>
+    <br>
+    <h2>Letter</h2>
+    <br>
+
+    <div class="Nav">
+        <ul>
+           <a href="gallery.html">
+        <li>Gallery</li>
+    </a>
+    <a href="letter.html">
+        <li style="color: rgb(18, 18, 189);">Letter</li>
+    </a>
+    <a href="aura.html">
+        <li>Aura</li>
+    </a>
+    <a href="soulful.html">
+        <li>Soulful</li></a>
+        </ul>
+    </div>
+    <br>
+    <input type="radio" name="letter" id="cover" checked>
+    <input type="radio" name="letter" id="main">
+    <div class="letter1" id="c1">
+        <h2> Dear Rakshita </h2>
+        <p>Read This When You Feel Low</p>
+        <br>
+        <label for="main" class="read">Read📖</label>
+    </div>
+<div class="letter1" id="m1">
+    <pre>Dear Rakshita,
+
+I just want you to know — you are the best friendship that has happened to me till now.
+
+I still remember those days of us chilling at your house, venting about everything going on in our lives. I truly miss those moments. Life has changed, we’ve grown, and we don’t meet as often anymore, but whenever I think of those memories, I can’t help but smile.
+
+Always remember — I will always be here for you, no matter what.
+
+I hope you achieve every dream you’ve ever wished for. You are one of the strongest, most determined people I know, and I have no doubt that you will reach your goals.
+
+So if you’re ever feeling lost, tired, or like giving up — come back to this letter. Let it remind you of who you are, how deeply loved you are, and how powerful your spirit truly is. Take your time. Be kind to yourself. The world needs your light, your kindness, your voice.
+
+And no matter what — I’m here. Always.
+
+With all my love,
+Himanshi 🤍</pre>
+<br>
+<label for="cover" class="read">Back</label>
+</div>
+<div class="home">
+  <a href="index.html">Home</a>
+</div>
+</body>
+</html>
